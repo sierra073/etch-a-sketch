@@ -15,7 +15,6 @@ div {
 .grid-container {
 	position: relative;
 	top: 30px;
-	/* outline: 2px solid #000; */
   border-radius: 12px;
   background-color: #C0C0C0;
 	font-size: 0;
@@ -24,6 +23,7 @@ div {
 	width: 650px;
 	padding: 0;
 	border: none;
+  overflow: hidden;
 }
 
 .grid {
