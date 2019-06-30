@@ -11,6 +11,7 @@ body {
 div {
   text-align: center;
 }
+button:focus {outline:0;}
 .etch-box {
   display: flex;
   flex-direction: row;
