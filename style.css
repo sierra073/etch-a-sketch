@@ -8,6 +8,9 @@ body {
   min-width: 100vw;
   overflow: hidden;
 }
+html {
+  overflow-y: scroll;
+}
 div {
   text-align: center;
 }
