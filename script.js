@@ -1,3 +1,26 @@
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+const defaultBlack = (e) => e.target.style.backgroundColor = 'black';
+const eraseGray = (e) => e.target.style.backgroundColor = '#C0C0C0';
+const randomColor = (e) => e.target.style.backgroundColor = getRandomColor();
+
+// not the best, but since only 3 here, easy enough to hardcode
+function setDrawMode(fun) {
+  document.querySelectorAll('.grid').forEach((grid) => {
+    grid.removeEventListener('mouseover', defaultBlack);
+    grid.removeEventListener('mouseover', eraseGray);
+    grid.removeEventListener('mouseover', randomColor);
+    grid.addEventListener('mouseover', fun);
+  });
+}
+
 function createGrid(n) {
   for (var rows = 0; rows < n; rows++) {
         for (var columns = 0; columns < n; columns++) {
@@ -6,15 +29,31 @@ function createGrid(n) {
           document.querySelector('.grid-container').appendChild(grid);
         };
     };
-    document.querySelectorAll('.grid').forEach(el => {
-        el.style.width = `${650/n}px`;
-        el.style.height = `${650/n}px`;
+
+    //set width and weight
+    document.querySelectorAll('.grid').forEach(grid => {
+        grid.style.width = `${700/n}px`;
+        grid.style.height = `${700/n}px`;
     });
+
+    setDrawMode(defaultBlack);
 }
 
-createGrid(40);
+function clearGrid(){
+   document.querySelectorAll('.grid').forEach((grid) => {
+    grid.parentNode.removeChild(grid);
+  })
+};
 
-const grids = document.querySelectorAll('.grid');
-grids.forEach((grid) => {
-  grid.addEventListener('mouseover', () => grid.style.backgroundColor = 'black');
-});
+function refreshGrid(){
+    let n = prompt("How many squares per side?");
+    clearGrid();
+    createGrid(n);
+};
+
+// 'clear grid' and 'colorful mode' buttons
+document.querySelector('#new-grid').addEventListener('click', refreshGrid);
+document.querySelector('#eraser').addEventListener('click', () => setDrawMode(eraseGray));
+document.querySelector('#colorful').addEventListener('click', () => setDrawMode(randomColor));
+
+createGrid(46);

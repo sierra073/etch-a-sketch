@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   min-height: 100vh;
   min-width: 100vw;
@@ -12,23 +12,93 @@ body {
 div {
   text-align: center;
 }
+.etch-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  top: 30px;
+  bottom: 30px;
+  margin: auto;
+  height: 860px;
+	width: 860px;
+  background-color: #E82828;
+  box-shadow: inset 0 0 15px #6F1515;
+  -webkit-box-shadow: inset 0 0 15px #6F1515;
+}
 .grid-container {
-	position: relative;
-	top: 30px;
+	/* top: 30px;
+  bottom: 30px; */
   border-radius: 12px;
   background-color: #C0C0C0;
 	font-size: 0;
 	margin: auto;
-	height: 650px;
-	width: 650px;
+	height: 700px;
+	width: 700px;
 	padding: 0;
 	border: none;
   overflow: hidden;
 }
-
 .grid {
 	margin: 0;
 	padding: 0;
 	border: none;
 	display: inline-block;
+}
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border: none;
+  width: 720px;
+  height: 57px;
+  margin: auto;
+}
+.btn{
+    text-decoration: none;
+    color: #8f8f8f;
+    font-size: 1em;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    font-weight: bold;
+    background-image: -webkit-linear-gradient(#e8e8e8 0%, #d6d6d6 100%);
+    background-image: linear-gradient(#e8e8e8 0%, #d6d6d6 100%);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+    border-bottom: solid 2px #b5b5b5;
+}
+.btn:active {
+    background-image: -webkit-linear-gradient(#efefef 0%, #d6d6d6 100%);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+    border-bottom: none;
+}
+.title-text {
+  text-align: center;
+  font-family: "Arial Black";
+  font-size: 0.8em;
+  font-style: italic;
+}
+.title-etch {
+  text-align: center;
+  font-family: "Brush Script MT";
+  font-size: 1.65em;
+  /* font-style: italic; */
+}
+.golden-base {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight:bold;
+  -webkit-margin-before: 0.3em;
+  -webkit-margin-after: 0.2em;
+}
+.golden {
+  background-image: -webkit-linear-gradient(#ffd45c 45%, #9A8000 75%);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.09),
+    -1px -1px 0 rgba(255, 220, 0, 0.670);
+  font-size:2em;
 }
