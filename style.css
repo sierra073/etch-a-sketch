@@ -15,28 +15,29 @@ div {
   text-align: center;
 }
 button:focus {outline:0;}
+
 .etch-box {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  top: 30px;
-  bottom: 30px;
+  top: 2vw;
+  bottom: 2vw;
   margin: auto;
-  height: 860px;
-  width: 860px;
+  height: 50vw;
+  width: 50vw;
   background-color: #E82828;
   box-shadow: inset 0 0 15px #6F1515;
   -webkit-box-shadow: inset 0 0 15px #6F1515;
 }
 .grid-container {
-  border-radius: 12px;
+  border-radius: 0.6vw;
   background-color: #C0C0C0;
   font-size: 0;
   margin: auto;
-  height: 700px;
-  width: 700px;
+  height: 40vw;
+  width: 40vw;
   padding: 0;
   border: none;
   overflow: hidden;
@@ -53,16 +54,16 @@ button:focus {outline:0;}
   justify-content: space-around;
   align-items: center;
   border: none;
-  width: 720px;
-  height: 57px;
+  width: 30vw;
+  height: 8vh;
   margin: auto;
 }
 .btn{
   text-decoration: none;
   color: #8f8f8f;
-  font-size: 1em;
-  padding: 12px;
-  border-radius: 8px;
+  font-size: 0.9vw;
+  padding: 0.82vw;
+  border-radius: 0.7vw;
   text-align: center;
   vertical-align: middle;
   overflow: hidden;
@@ -81,13 +82,13 @@ button:focus {outline:0;}
 .title-text {
   text-align: center;
   font-family: "Arial Black";
-  font-size: 0.8em;
+  font-size: 0.75vw;
   font-style: italic;
 }
 .title-etch {
   text-align: center;
   font-family: "Brush Script MT";
-  font-size: 1.65em;
+  font-size: 1.4vw;
 }
 .golden-base {
   -webkit-background-clip: text;

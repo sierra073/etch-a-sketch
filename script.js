@@ -32,8 +32,8 @@ function createGrid(n) {
 
     //set width and weight
     document.querySelectorAll('.grid').forEach(grid => {
-        grid.style.width = `${700/n}px`;
-        grid.style.height = `${700/n}px`;
+        grid.style.width = `${40/n}vw`;
+        grid.style.height = `${40/n}vw`;
     });
 
     setDrawMode(defaultBlack);
